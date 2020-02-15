@@ -10,6 +10,8 @@ result1=$((firstNumber+secondNumber*thirdNumber))
 	echo "$firstNumber + $secondNumber * $thirdNumber = $result1"
 result2=$((firstNumber*secondNumber+thirdNumber))
 	echo "$firstNumber * $secondNumber + $thirdNumber = $result2"
-	result3=`echo "scale=2; $thirdNumber+$firstNumber/$secondNumber" |bc`
+result3=`echo "scale=2; $thirdNumber+$firstNumber/$secondNumber" |bc`
 	echo "$thirdNumber * $firstNumber / $secondNumber = $result3"
+result4=$((firstNumber%secondNumber+thirdNumber))
+	echo "$firstNumber % $secondNumber + $thirdNumber = $result4"
 
