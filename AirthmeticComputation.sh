@@ -9,5 +9,7 @@ read -p "Enter the third number: " thirdNumber
 result1=$((firstNumber+secondNumber*thirdNumber))
 	echo "$firstNumber + $secondNumber * $thirdNumber = $result1"
 result2=$((firstNumber*secondNumber+thirdNumber))
-   echo "$firstNumber * $secondNumber + $thirdNumber = $result2"
+	echo "$firstNumber * $secondNumber + $thirdNumber = $result2"
+	result3=`echo "scale=2; $thirdNumber+$firstNumber/$secondNumber" |bc`
+	echo "$thirdNumber * $firstNumber / $secondNumber = $result3"
 
