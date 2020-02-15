@@ -6,5 +6,8 @@ read -p "Enter the first number: " firstNumber
 read -p "Enter the second number: " secondNumber
 read -p "Enter the third number: " thirdNumber
 
-result=$((firstNumber+secondNumber*thirdNumber))
-	echo "$firstNumber + $secondNumber * $thirdNumber = $result"
+result1=$((firstNumber+secondNumber*thirdNumber))
+	echo "$firstNumber + $secondNumber * $thirdNumber = $result1"
+result2=$((firstNumber*secondNumber+thirdNumber))
+   echo "$firstNumber * $secondNumber + $thirdNumber = $result2"
+
