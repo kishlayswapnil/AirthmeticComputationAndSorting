@@ -14,7 +14,7 @@ result3=`echo "scale=2; $thirdNumber+$firstNumber/$secondNumber" |bc`
 	echo "$thirdNumber * $firstNumber / $secondNumber = $result3"
 result4=$((firstNumber%secondNumber+thirdNumber))
 	echo "$firstNumber % $secondNumber + $thirdNumber = $result4"
-
+#Declaring Dictionary and displaying it.
 declare -A result
 	result[computation1]=$result1
 	result[computation2]=$result2
@@ -22,9 +22,9 @@ declare -A result
 	result[computation4]=$result4
 
 echo ${result[@]}
-	Array[0]=${result[computation1]}
-	Array[1]=${result[computation2]}
-	Array[2]=${result[computation3]}
-	Array[3]=${result[computation4]}
-
+#Declaring and displaying array.
+for (( index=0; index<4; index++ ))
+do
+	Array[index]=${result[computation$((index+1))]}
+done
 echo ${Array[@]}
