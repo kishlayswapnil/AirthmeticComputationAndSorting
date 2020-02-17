@@ -22,3 +22,9 @@ declare -A result
 	result[computation4]=$result4
 
 echo ${result[@]}
+	Array[0]=${result[computation1]}
+	Array[1]=${result[computation2]}
+	Array[2]=${result[computation3]}
+	Array[3]=${result[computation4]}
+
+echo ${Array[@]}
