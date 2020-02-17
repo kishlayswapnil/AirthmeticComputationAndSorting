@@ -15,3 +15,10 @@ result3=`echo "scale=2; $thirdNumber+$firstNumber/$secondNumber" |bc`
 result4=$((firstNumber%secondNumber+thirdNumber))
 	echo "$firstNumber % $secondNumber + $thirdNumber = $result4"
 
+declare -A result
+	result[computation1]=$result1
+	result[computation2]=$result2
+	result[computation3]=$result3
+	result[computation4]=$result4
+
+echo ${result[@]}
