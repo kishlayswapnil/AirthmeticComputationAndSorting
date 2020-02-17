@@ -41,3 +41,18 @@ do
 	done
 done
 echo "Array in Decending order will be like: ${Array[@]}"
+#Sorting in ascending order.
+for (( index1=0; index1<${#Array[@]}; index1++ ))
+do
+   for (( index2=index1+1; index2<${#Array[@]}; index2++ ))
+   do
+      if (($(echo "${Array[index1]} > ${Array[index2]}"| bc -l)))
+      then
+         temporary=${Array[index2]}
+         Array[index2]=${Array[index1]}
+         Array[index1]=$temporary
+      fi
+   done
+done
+echo "Array in ascending order will be like: ${Array[@]}"
+
